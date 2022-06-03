@@ -1,0 +1,10 @@
+D:\GGAME2022\WizResizer\WizResizer\bin\Debug\WizResizer.exe.config
+D:\GGAME2022\WizResizer\WizResizer\bin\Debug\WizResizer.exe
+D:\GGAME2022\WizResizer\WizResizer\bin\Debug\WizResizer.pdb
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.csproj.AssemblyReference.cache
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.Form1.resources
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.Properties.Resources.resources
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.csproj.GenerateResource.cache
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.csproj.CoreCompileInputs.cache
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.exe
+D:\GGAME2022\WizResizer\WizResizer\obj\Debug\WizResizer.pdb
