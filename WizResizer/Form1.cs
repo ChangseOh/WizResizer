@@ -399,6 +399,8 @@ namespace WizResizer
                 if (!radioButton1.Checked)
                     targetFname = string.Format("{0}\\{1}{2}{3}{4}", filePath, textBox3.Text, fileName, textBox4.Text, fileExt);
 
+                img.Dispose();
+
                 switch (fileExt.ToLower())
                 {
                     case ".bmp":
@@ -427,7 +429,7 @@ namespace WizResizer
 
         private void textBox1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 //선택이 하나뿐이고 비율 유지가 되어있으면 textBox2의 값도 연동해서 변하게 한다
                 if (listBox1.SelectedItems.Count == 1 && checkBox2.Checked)
@@ -446,7 +448,7 @@ namespace WizResizer
 
         private void textBox2_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter || e.KeyCode == Keys.Tab)
             {
                 //선택이 하나뿐이고 비율 유지가 되어있으면 textBox2의 값도 연동해서 변하게 한다
                 if (listBox1.SelectedItems.Count == 1 && checkBox2.Checked)
