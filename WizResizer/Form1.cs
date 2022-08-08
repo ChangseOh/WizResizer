@@ -177,7 +177,30 @@ namespace WizResizer
             List<string> s = new List<string>();
             foreach (var ss in temps)
             {
-                switch (Path.GetExtension(ss))
+                if(Directory.Exists(ss))
+                {
+                    nowSourcePath = ss;
+                    System.IO.DirectoryInfo di = new System.IO.DirectoryInfo(ss);
+                    foreach(var _ss in di.GetFiles())
+                    {
+                        if (Directory.Exists(_ss.ToString()))
+                            continue;
+
+                        switch (Path.GetExtension(_ss.ToString()).ToLower())
+                        {
+                            case ".bmp":
+                            case ".gif":
+                            case ".png":
+                            case ".jpg":
+                            case ".jpeg":
+                            case ".tiff":
+                                s.Add(ss + "\\" + _ss.ToString());
+                                break;
+                        }
+                    }
+                }
+
+                switch (Path.GetExtension(ss).ToLower())
                 {
                     case ".bmp":
                     case ".gif":
@@ -482,6 +505,13 @@ namespace WizResizer
         private void button1_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.SelectedPath == "")
+            {
+                if (Directory.Exists(textBox5.Text))
+                    fbd.SelectedPath = textBox5.Text;
+                else
+                    fbd.SelectedPath = nowSourcePath;
+            }
             if (fbd.ShowDialog() == DialogResult.OK)
             {
                 textBox5.Text = fbd.SelectedPath;
